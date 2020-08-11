@@ -2,22 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
+import { isNumberPrime } from "./prime"
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  rootElement
-);
-const isNumberPrime = (number) => {
-  if (number < 1) return false;
-  for (let divider = 2; divider < number / 2; divider++) {
-    if (number % divider === 0) return false;
-  }
-  return true;
-};
-
 const tests = [
   -66,
   -10,
@@ -38,14 +25,18 @@ const tests = [
   66,
   10
 ];
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+    {tests.map((number) => {
+      const log = isNumberPrime(number)
+        ? `Is Prime: ${number}`
+        : `Is not Prime: ${number}`;
+      console.log(log);
 
-document.footer.innerHTML = tests
-  .map((number) => {
-    const log = isNumberPrime(number)
-      ? `Is Prime: ${number}`
-      : `Is not Prime: ${number}`;
-    console.log(log);
+      return <>{log}<br/></>;
+    })}
+  </React.StrictMode>,
+  rootElement
+);
 
-    return log;
-  })
-  .join("<br/>");

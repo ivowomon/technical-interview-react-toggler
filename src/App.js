@@ -8,7 +8,7 @@ const COLORS = {
   2: "green"
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({//I believe a have to use this instead of what I did
   root: {
     "& > *": {
       margin: theme.spacing(1)
