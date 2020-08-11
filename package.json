@@ -1,0 +1,15 @@
+{
+  "title": "Material demo",
+  "devDependencies": {
+    "react-scripts": "latest"
+  },
+  "description": "",
+  "dependencies": {
+    "react-dom": "latest",
+    "react": "latest",
+    "@material-ui/icons": "latest",
+    "@material-ui/core": "latest"
+  },
+  "keywords": [],
+  "name": "color-theme-changer"
+}
