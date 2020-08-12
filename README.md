@@ -4,4 +4,7 @@ This was a code challenge on my interview with SchoolMint. Also i have to crete 
 
 ## Usage
 
-Just open index.html on a browser.
+```bash
+$ npm install
+$ npm run start
+```
