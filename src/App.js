@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({//I believe a have to use this instead
 export default function FloatingActionButtons() {
   const [colorState, toggleColor] = useState(1);
   const toggle = useCallback((color) => {
-    if (color > 2) return 0;
+    if (color > 1) return 0;
     return color + 1;
   });
   const [message, setMessage] = useState("Loading...");
 
   return (
     <>
-      <button onClick={() => toggleColor(toggle(colorState))}>Im BTN</button>
-      <ChildComponent colorState={colorState} setMessage={setMessage} />
       <h1>{message}</h1>
+      <ChildComponent colorState={colorState} setMessage={setMessage} />
+      <button onClick={() => toggleColor(toggle(colorState))}>Change color</button>
     </>
   );
 }

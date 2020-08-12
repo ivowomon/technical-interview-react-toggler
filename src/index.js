@@ -28,6 +28,7 @@ const tests = [
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <br/>
     {tests.map((number) => {
       const log = isNumberPrime(number)
         ? `Is Prime: ${number}`
